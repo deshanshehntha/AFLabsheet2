@@ -60,17 +60,17 @@
         //
         // });
 
-        function vehicle(type) {
-            vehicle.vehicleCount++;
+        function Vehicle(type) {
+            Vehicle.vehicleCount++;
             this.type = type;
         }
          vehicle.VehicleCount = 0;
 
-        vehicle.prototype.drive = function () {
+        Vehicle.prototype.drive = function () {
             console.log('Vehicle is Driving');
         };
 
-        var vehicle = new vehicle ('Toyota');
+        var vehicle = new Vehicle('Toyota');
 
         function Car(type) {
             vehicle.call(this, type);
@@ -82,7 +82,7 @@
         Car.prototype.balanceWheels = function () {
 
             console.log('Wheels are balanced')
-        }
+        };
 
 
         var car = new Car ('Nissan');
